@@ -24,3 +24,9 @@
 .button:focus {
   background-color: var(--button-accent-color);
 }
+
+.button--modal {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+}
