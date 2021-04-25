@@ -16,43 +16,43 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="container">
-            <nav class="main-nav">
-                <a class="webstudio" href="./" lang="en">
-                    <span class="web">Web</span>Studio
-                </a>
-                <ul class="list site-nav">
-                    <li class="item"> <a class="link nav-link" href="./index.html">Студия</a></li>
-                    <li class="item"> <a class="link nav-link current" href="./portfolio.html">Портфолио</a></li>
-                    <li class="item"> <a class="link nav-link" href="">Контакты</a></li>
-                </ul>
-    
-                <ul class="list auth-nav">
-                    <li class="item">
-                        <a class="link nav-link" href="mailto:info@devstudio.com">
-                            <div class="auth-nav-item">
-                                <svg class="auth-nav-icon" width="16" height="12">
-                                    <use href="./images/icons.svg#icon-mail"></use>
-                                </svg>
-                                info@devstudio.com
-                            </div>
-                        </a>
-                    </li>
-                    <li class="item">
-                        <a class="link nav-link" href="tel:+380961111111">
-                            <div class="auth-nav-item">
-                                <svg class="auth-nav-icon" width="10" height="16">
-                                    <use href="./images/icons.svg#icon-tel"></use>
-                                </svg>
-                                +38 096 111 11 11
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header class="header">
+    <div class="container">
+        <nav class="main-nav">
+            <a class="logo" href="./" lang="en">
+                <span class="logo__web">Web</span>Studio
+            </a>
+            <ul class="list site-nav">
+                <li class="site-nav__item"> <a class="link site-nav__link" href="./index.html">Студия</a></li>
+                <li class="site-nav__item"> <a class="link site-nav__link site-nav__link--current" href="./portfolio.html">Портфолио</a></li>
+                <li class="site-nav__item"> <a class="link site-nav__link" href="">Контакты</a></li>
+            </ul>
+
+            <ul class="list auth-nav">
+                <li class="auth-nav__item">
+                    <a class="link site-nav__link auth-nav__link" href="mailto:info@devstudio.com">
+                        <div class="auth-nav__icon-box">
+                            <svg class="auth-nav__icon" width="16" height="12">
+                                <use href="./images/icons.svg#icon-mail"></use>
+                            </svg>
+                            info@devstudio.com
+                        </div>
+                    </a>
+                </li>
+                <li class="auth-nav__item">
+                    <a class="link site-nav__link auth-nav__link" href="tel:+380961111111">
+                        <div class="auth-nav__icon-box">
+                            <svg class="auth-nav__icon" width="10" height="16">
+                                <use href="./images/icons.svg#icon-tel"></use>
+                            </svg>
+                            +38 096 111 11 11
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
     <main>
         <section class="section">
@@ -210,55 +210,59 @@
     </main>
 
     <footer class="dark-bg footer">
-        <div class="container footer-box">
-            <div class="contacts-box">
-                <a class="webstudio" href="./" lang="en">
-                    <span class="web">Web</span><span class="studio">Studio</span>
+        <div class="container footer__container">
+            <div class="footer__contacts-box">
+                <a class="logo" href="./" lang="en">
+                    <span class="logo__web">Web</span><span class="logo__studio">Studio</span>
                 </a>
                 <address class="address">
                     <ul class="list">
                         <li>
-                            <a class="link map-link" href="https://goo.gl/maps/1BC2KQwBZv3AQeFU6" target="_blank"
+                            <a class="link address__map-link" href="https://goo.gl/maps/1BC2KQwBZv3AQeFU6" target="_blank"
                                 rel="noopener noreferrer">
                                 г. Киев, пр-т Леси Украинки, 26</a>
                         </li>
-                        <li class="contact-item">
-                            <a class="link contact-link" href="mailto:info@example.com">info@example.com</a>
+                        <li class="address__contact-item">
+                            <a class="link address__contact-link" href="mailto:info@example.com">info@example.com</a>
                         </li>
-                        <li class="contact-item">
-                            <a class="link contact-link" href="tel:+380991111111">+38 099 111 11 11</a>
+                        <li class="address__contact-item">
+                            <a class="link address__contact-link" href="tel:+380991111111">+38 099 111 11 11</a>
                         </li>
                     </ul>
                 </address>
             </div>
     
-            <div class="join-box">
-                <h3 class="advantage-title join-title">Присоединяйтесь</h3>
-                <ul class="list social-icons">
-                    <li class="social-icons-item">
-                        <a href="" class="social-icons-link" target="_blank" rel="noopener noreferrer">
-                            <svg class="icon">
+            <div class="footer__join-box">
+                <h3 class="advantage__title footer__title">Присоединяйтесь</h3>
+                <ul class="list social-icons social-icons--footer">
+                    <li class="social-icons__item">
+                        <a href="" class="social-icons__link social-icons__link--footer" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg class="social-icons__icon social-icons__icon--footer">
                                 <use href="./images/icons.svg#icon-instagram "></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="social-icons-item">
-                        <a href="" class="social-icons-link" target="_blank" rel="noopener noreferrer">
-                            <svg class="icon">
+                    <li class="social-icons__item">
+                        <a href="" class="social-icons__link social-icons__link--footer" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg class="social-icons__icon social-icons__icon--footer">
                                 <use href="./images/icons.svg#icon-twitter"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="social-icons-item">
-                        <a href="" class="social-icons-link" target="_blank" rel="noopener noreferrer">
-                            <svg class="icon">
+                    <li class="social-icons__item">
+                        <a href="" class="social-icons__link social-icons__link--footer" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg class="social-icons__icon social-icons__icon--footer">
                                 <use href="./images/icons.svg#icon-facebook"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="social-icons-item">
-                        <a href="" class="social-icons-link" target="_blank" rel="noopener noreferrer">
-                            <svg class="icon">
+                    <li class="social-icons__item">
+                        <a href="" class="social-icons__link social-icons__link--footer" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg class="social-icons__icon social-icons__icon--footer">
                                 <use href="./images/icons.svg#icon-linkedin"></use>
                             </svg>
                         </a>
@@ -266,14 +270,14 @@
                 </ul>
             </div>
     
-            <div class="form-box">
-                <h3 class="advantage-title join-title">Подпишитесь на рассылку</h3>
-                <form class="sign-us">
-                    <label class="form-label">
-                        <input class="form-input" type="email" name="email" placeholder="E-mail">
+            <div class="footer__form-box">
+                <h3 class="advantage__title footer__title">Подпишитесь на рассылку</h3>
+                <form class="form">
+                    <label class="form__label">
+                        <input class="form__input" type="email" name="email" placeholder="E-mail">
                     </label>
                     <button type="submit" class="button">Подписаться
-                        <svg class="icon-send" width="24" height="24">
+                        <svg class="form__icon" width="24" height="24">
                             <use href="./images/icons.svg#icon-send"></use>
                         </svg>
                     </button>

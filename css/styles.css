@@ -13,7 +13,7 @@
   --border-color: #ececec;
   --card-border-color: #eeeeee;
   --company-logo-color: #afb1b8;
-  --grid-item: 1;
+  --grid__item: 1;
   --duration: 250ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -69,7 +69,7 @@ address {
 }
 
 .link,
-.webstudio {
+.logo {
   text-decoration: none;
   color: inherit;
   transition: color var(--duration) var(--timing-function);
@@ -100,9 +100,9 @@ address {
   margin-left: -30px;
 }
 
-.grid-item {
+.grid__item {
   margin-left: 30px;
-  flex-basis: calc((100% - 30px * var(--grid-item)) / var(--grid-item));
+  flex-basis: calc((100% - 30px * var(--grid__item)) / var(--grid__item));
 }
 
 .button {
@@ -132,6 +132,7 @@ address {
   background-color: var(--button-accent-color);
 }
 
+/* header */
 .header {
   border-bottom: 1px solid var(--border-color);
 }
@@ -141,14 +142,18 @@ address {
   align-items: center;
 }
 
-.webstudio {
+.logo {
   font-family: var(--logo-font);
   font-size: 26px;
   line-height: 1.19;
   color: var(--light-bg-text-color);
 }
-.web {
+.logo__web {
   color: var(--accent-color);
+}
+
+.logo__studio {
+  color: var(--dark-bg-text-color);
 }
 
 .site-nav {
@@ -156,16 +161,30 @@ address {
   margin-left: 93px;
 }
 
-.site-nav .item:not(:last-child) {
+.site-nav__item:not(:last-child) {
   margin-right: 50px;
 }
 
-.site-nav .link.current {
+.site-nav__link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav__link {
+  color: var(--title-color);
+}
+
+.site-nav__link--current {
   color: var(--accent-color);
   position: relative;
 }
 
-.current::after {
+.site-nav__link--current::after {
   content: '';
 
   position: absolute;
@@ -179,20 +198,6 @@ address {
   background-color: var(--accent-color);
 }
 
-.nav-link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
-nav .nav-link {
-  color: var(--title-color);
-}
-
 .auth-nav {
   display: flex;
   justify-content: center;
@@ -200,31 +205,32 @@ nav .nav-link {
   margin-left: auto;
 }
 
-.auth-nav-item {
-  display: inline-flex;
-  align-items: center;
+.auth-nav__item:not(:last-child) {
+  margin-right: 50px;
 }
 
-.auth-nav .nav-link {
+.auth-nav__link {
   color: var(--main-text-color);
 
   transition: color var(--duration) var(--timing-function);
 }
 
-.auth-nav .nav-link:hover,
-.auth-nav .nav-link:focus {
+.auth-nav__link:hover,
+.auth-nav__link:focus {
   color: var(--accent-color);
 }
 
-.auth-nav .item:not(:last-child) {
-  margin-right: 50px;
+.auth-nav__icon-box {
+  display: inline-flex;
+  align-items: center;
 }
 
-.auth-nav-icon {
+.auth-nav__icon {
   margin-right: 10px;
   fill: currentColor;
 }
 
+/* Главная секция hero */
 .hero {
   text-align: center;
   padding: 200px 0;
@@ -240,13 +246,17 @@ nav .nav-link {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.hero-content {
+.dark-bg {
+  background-color: var(--dark-bg-color);
+}
+
+.hero__content {
   width: 696px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.page-title {
+.hero__title {
   margin-bottom: 30px;
   text-align: center;
   font-weight: 900;
@@ -257,11 +267,13 @@ nav .nav-link {
   color: var(--dark-bg-text-color);
 }
 
-.dark-bg {
-  background-color: var(--dark-bg-color);
+/* секции */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
-.section-title {
+.section__title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -269,12 +281,9 @@ nav .nav-link {
   text-align: center;
   color: var(--title-color);
 }
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
 
-.icon-box {
+/* Cекция о преимуществах */
+.advantage__icon-box {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -285,11 +294,11 @@ nav .nav-link {
   border-radius: 4px;
 }
 
-.advantage-item {
-  --grid-item: 4;
+.advantage__item {
+  --grid__item: 4;
 }
 
-.advantage-title {
+.advantage__title {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
@@ -298,20 +307,21 @@ nav .nav-link {
   color: var(--title-color);
 }
 
+/* Cекция Чем мы занимаемся */
 .work {
   padding-top: 0;
 }
 
-.work-item {
-  --grid-item: 3;
+.work__item {
+  --grid__item: 3;
 }
 
-.work-link {
+.work__link {
   display: block;
   position: relative;
 }
 
-.work-type {
+.work__type {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -329,22 +339,23 @@ nav .nav-link {
   color: var(--dark-bg-text-color);
 }
 
+/* Cекция о Нашей команде */
 .team {
   background-color: var(--team-bg-color);
 }
 
-.team-member {
+.team__member {
   padding-bottom: 30px;
   font-size: 16px;
   line-height: 1.186;
   text-align: center;
-  --grid-item: 4;
+  --grid__item: 4;
   background-color: var(--dark-bg-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-member .name {
+.team__member-name {
   margin-top: 30px;
   margin-bottom: 10px;
   font-weight: 500;
@@ -352,16 +363,17 @@ nav .nav-link {
   color: var(--title-color);
 }
 
+/* социальные иконки */
 .social-icons {
   display: inline-flex;
   margin-top: 16px;
 }
 
-.social-icons-item + .social-icons-item {
+.social-icons__item + .social-icons__item {
   margin-left: 10px;
 }
 
-.social-icons-link {
+.social-icons__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -372,7 +384,7 @@ nav .nav-link {
   transition: background-color var(--duration) var(--timing-function);
 }
 
-.social-icons .icon {
+.social-icons__icon {
   width: 20px;
   height: 20px;
   fill: var(--company-logo-color);
@@ -380,29 +392,34 @@ nav .nav-link {
   transition: fill var(--duration) var(--timing-function);
 }
 
-.join-box .social-icons-link {
+.social-icons--footer {
+  margin-top: 0;
+}
+
+.social-icons__link--footer {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.join-box .icon {
+.social-icons__icon--footer {
   fill: var(--dark-bg-text-color);
 }
 
-.social-icons-link:hover,
-.social-icons-link:focus {
+.social-icons__link:hover,
+.social-icons__link:focus {
   background-color: var(--accent-color);
 }
 
-.social-icons-link:hover .icon,
-.social-icons-link:focus .icon {
+.social-icons__link:hover .social-icons__icon,
+.social-icons__link:focus .social-icons__icon {
   fill: var(--dark-bg-text-color);
 }
 
-.company-item {
-  --grid-item: 6;
+/* Секция о Клиентах */
+.company__item {
+  --grid__item: 6;
 }
 
-.company-link {
+.company__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -415,74 +432,68 @@ nav .nav-link {
   transition: fill var(--duration) var(--timing-function), border-color var(--duration) var(--timing-function);
 }
 
-.company-link:hover,
-.company-link:focus {
+.company__link:hover,
+.company__link:focus {
   fill: var(--accent-color);
   border-color: var(--accent-color);
 }
 
+/* футер */
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.studio {
-  color: var(--dark-bg-text-color);
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__contacts-box,
+.footer__join-box {
+  flex-basis: calc((50% - 45px) / 2);
 }
 
 .address {
   margin-top: 20px;
 }
 
-.map-link {
+.address__map-link {
   color: var(--dark-bg-text-color);
 }
 
-.contact-item {
+.address__contact-item {
   margin-top: 9px;
 }
 
-.contact-link {
+.address__contact-link {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.footer-box {
-  display: flex;
-  justify-content: space-between;
-}
-
-.contacts-box,
-.join-box {
-  flex-basis: calc((50% - 45px) / 2);
-}
-
-.form-box {
-  flex-basis: calc(50% - 15px);
-}
-
-.join-box,
-.form-box {
+.footer__join-box,
+.footer__form-box {
   margin-top: 12px;
 }
 
-.join-title {
+.footer__title {
   margin-bottom: 20px;
   color: var(--dark-bg-text-color);
 }
 
-.join-box .social-icons {
-  margin-top: 0;
+.footer__form-box {
+  flex-basis: calc(50% - 15px);
 }
 
-.sign-us {
+/*форма в футере*/
+.form {
   display: flex;
 }
 
-.sign-us .form-label {
+.form__label {
   margin-right: 12px;
 }
 
-.sign-us .form-input {
+.form__input {
   padding: 15px 16px;
   width: 358px;
   height: 50px;
@@ -495,11 +506,11 @@ nav .nav-link {
   color: var(--dark-bg-text-color);
 }
 
-.sign-us .form-input::placeholder {
+.form__input::placeholder {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.icon-send {
+.form__icon {
   display: inline-block;
   margin-left: 10px;
 }
