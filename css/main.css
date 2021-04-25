@@ -118,6 +118,12 @@ address {
   background-color: var(--button-accent-color);
 }
 
+.button--modal {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .header {
   border-bottom: 1px solid var(--border-color);
 }
@@ -788,11 +794,5 @@ address {
 .modal-form__policy-link {
   text-decoration-line: underline;
   color: var(--accent-color);
-}
-
-.button--modal {
-  display: flex;
-  margin-right: auto;
-  margin-left: auto;
 }
 /*# sourceMappingURL=main.css.map */
