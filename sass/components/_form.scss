@@ -17,12 +17,11 @@
   font-size: 16px;
   line-height: 1.25;
   color: var(--dark-bg-text-color);
-}
 
-.form__input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
-
 .form__icon {
   display: inline-block;
   margin-left: 10px;

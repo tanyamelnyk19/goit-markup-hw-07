@@ -48,16 +48,15 @@ address {
   overflow: hidden;
 }
 
-.link,
-.logo {
+.link {
   text-decoration: none;
   color: inherit;
   transition: color var(--duration) var(--timing-function);
-}
 
-.link:hover,
-.link:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .list {

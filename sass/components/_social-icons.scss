@@ -16,6 +16,11 @@
   border-radius: 50%;
 
   transition: background-color var(--duration) var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 
 .social-icons__icon {
@@ -24,6 +29,11 @@
   fill: var(--company-logo-color);
 
   transition: fill var(--duration) var(--timing-function);
+
+  .social-icons__link:hover &,
+  .social-icons__link:focus & {
+    fill: var(--dark-bg-text-color);
+  }
 }
 
 .social-icons--footer {
@@ -35,15 +45,5 @@
 }
 
 .social-icons__icon--footer {
-  fill: var(--dark-bg-text-color);
-}
-
-.social-icons__link:hover,
-.social-icons__link:focus {
-  background-color: var(--accent-color);
-}
-
-.social-icons__link:hover .social-icons__icon,
-.social-icons__link:focus .social-icons__icon {
   fill: var(--dark-bg-text-color);
 }

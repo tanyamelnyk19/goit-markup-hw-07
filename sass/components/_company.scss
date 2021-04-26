@@ -13,10 +13,10 @@
   fill: var(--company-logo-color);
 
   transition: fill var(--duration) var(--timing-function), border-color var(--duration) var(--timing-function);
-}
 
-.company__link:hover,
-.company__link:focus {
-  fill: var(--accent-color);
-  border-color: var(--accent-color);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+  }
 }

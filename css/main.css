@@ -68,15 +68,13 @@ address {
   overflow: hidden;
 }
 
-.link,
-.logo {
+.link {
   text-decoration: none;
   color: inherit;
   transition: color var(--duration) var(--timing-function);
 }
 
-.link:hover,
-.link:focus {
+.link:hover, .link:focus {
   color: var(--accent-color);
 }
 
@@ -113,8 +111,7 @@ address {
   transition: background-color var(--duration) var(--timing-function);
 }
 
-.button:hover,
-.button:focus {
+.button:hover, .button:focus {
   background-color: var(--button-accent-color);
 }
 
@@ -137,6 +134,8 @@ address {
   font-family: var(--logo-font);
   font-size: 26px;
   line-height: 1.19;
+  text-decoration: none;
+  color: inherit;
   color: var(--light-bg-text-color);
 }
 
@@ -200,8 +199,7 @@ address {
   transition: color var(--duration) var(--timing-function);
 }
 
-.auth-nav__link:hover,
-.auth-nav__link:focus {
+.auth-nav__link:hover, .auth-nav__link:focus {
   color: var(--accent-color);
 }
 
@@ -372,11 +370,20 @@ address {
   transition: background-color var(--duration) var(--timing-function);
 }
 
+.social-icons__link:hover, .social-icons__link:focus {
+  background-color: var(--accent-color);
+}
+
 .social-icons__icon {
   width: 20px;
   height: 20px;
   fill: var(--company-logo-color);
   transition: fill var(--duration) var(--timing-function);
+}
+
+.social-icons__link:hover .social-icons__icon,
+.social-icons__link:focus .social-icons__icon {
+  fill: var(--dark-bg-text-color);
 }
 
 .social-icons--footer {
@@ -388,16 +395,6 @@ address {
 }
 
 .social-icons__icon--footer {
-  fill: var(--dark-bg-text-color);
-}
-
-.social-icons__link:hover,
-.social-icons__link:focus {
-  background-color: var(--accent-color);
-}
-
-.social-icons__link:hover .social-icons__icon,
-.social-icons__link:focus .social-icons__icon {
   fill: var(--dark-bg-text-color);
 }
 
@@ -417,8 +414,7 @@ address {
   transition: fill var(--duration) var(--timing-function), border-color var(--duration) var(--timing-function);
 }
 
-.company__link:hover,
-.company__link:focus {
+.company__link:hover, .company__link:focus {
   fill: var(--accent-color);
   border-color: var(--accent-color);
 }
@@ -523,8 +519,7 @@ address {
   transition: background-color var(--duration) var(--timing-function), color var(--duration) var(--timing-function), box-shadow var(--duration) var(--timing-function);
 }
 
-.filter__button:hover,
-.filter__button:focus {
+.filter__button:hover, .filter__button:focus {
   background-color: var(--accent-color);
   color: var(--dark-bg-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -606,8 +601,7 @@ address {
   transition: box-shadow var(--duration) var(--timing-function);
 }
 
-.cards__link:hover,
-.cards__link:focus {
+.cards__link:hover, .cards__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 

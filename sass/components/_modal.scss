@@ -58,11 +58,11 @@
 .modal__icon-close {
   fill: var(--light-bg-text-color);
   transition: fill var(--duration) var(--timing-function);
-}
 
-.modal__close-button:hover .modal__icon-close,
-.modal__close-button:focus .modal__icon-close {
-  fill: var(--accent-color);
+  .modal__close-button:hover &,
+  .modal__close-button:focus & {
+    fill: var(--accent-color);
+  }
 }
 
 .modal__title {

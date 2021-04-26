@@ -18,11 +18,11 @@
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   transition: background-color var(--duration) var(--timing-function);
-}
 
-.button:hover,
-.button:focus {
-  background-color: var(--button-accent-color);
+  &:hover,
+  &:focus {
+    background-color: var(--button-accent-color);
+  }
 }
 
 .button--modal {
